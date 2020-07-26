@@ -1,6 +1,9 @@
 ---
 title: "About"
 permalink: /about/
+redirect_from: 
+ - /about/
+ - /about.html
  header: 
   image: "/images/harbor-background-1.jpg"
 
