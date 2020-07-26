@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I'm completing my Master's in Applied Statistics at UCLA while working in Business Intelligence at Gannett. My passion is machine learninig and statistical consulting.
+My passion is statistical analysis and machine learning. I'm making sense of data in Business Intelligence at Gannett while currently completing my Master's in Applied Statistics at UCLA.
 
 
