@@ -1,5 +1,4 @@
 ---
-permalink: /
 title: "About"
 permalink: /images/
  header: 
