@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About"
-permalink: /about/
+permalink: /images/
  header: 
   image: "/images/harbor-background-1.jpg"
 
