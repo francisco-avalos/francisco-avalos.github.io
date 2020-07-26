@@ -1,11 +1,11 @@
 ---
 title: "About"
-permalink: /images/
-redirect_from: 
- - /about/
- - /about.html
- header: 
-  image: "/images/harbor-background-1.jpg"
+#permalink: /images/
+#redirect_from: 
+# - /about/
+# - /about.html
+# header: 
+#  image: "/images/harbor-background-1.jpg"
 
 #excerpt: "About me"
 #author_profile: true
