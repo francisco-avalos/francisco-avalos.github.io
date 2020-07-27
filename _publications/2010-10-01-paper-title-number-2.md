@@ -1,15 +1,11 @@
 ---
-title: "Paper Title Number 2"
+title: "Financial Tips for College Students"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+# permalink: /publication/2015-10-01-paper-title-number-3
+excerpt: 'This paper provides students with financial tips during their undergraduate years.'
+date: 2013-10-27
+venue: 'TalkNerdyToMe'
+paperurl: 'https://talknerdy2me.org/financial-tips-for-college-students/'
+citation: 'Francisco Avalos Jr., Me. (2012). &quot;Financial Tips for College Students.&quot; <i>Blog</i>.'
 ---
-This paper is about the number 2. The number 3 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
-
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
+This blog is meant to provide undergraduate students with best unconventional financial practices.
