@@ -9,7 +9,7 @@ redirect_from:
   - /about.html
 ---
 
-Avid reader of world history, human behavior, and books. Something about that spark between human cognition and deep understanding of data that leads to action with results. 
+Well travelled around the world, lover of understanding human behavior, and an avid reader... I find the connect between human cognition and data-driven results emphatically riveting.
 
 My career focuses on just that, by telling those stories.
 
