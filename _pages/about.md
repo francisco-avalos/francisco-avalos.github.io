@@ -1,3 +1,4 @@
+
 ---
 permalink: /
 title: "About"
@@ -8,6 +9,11 @@ redirect_from:
   - /about.html
 ---
 
-My passion is statistical analysis and machine learning. I'm making sense of data in Business Intelligence at Gannett while currently completing my Master's in Applied Statistics at UCLA.
+Avid reader of world history, human behavior, and books. Something about that spark between human cognition and deep understanding of data that leads to action with results. 
+
+My career focuses on just that, by telling those stories.
+
+
+Master of Science in Applied Statistics & Data Science graduate from UCLA with 10+ years of professional experience.
 
 
