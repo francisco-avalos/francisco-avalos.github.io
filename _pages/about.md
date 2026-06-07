@@ -13,7 +13,6 @@ Well travelled around the world, lover of understanding human behavior, and an a
 
 My career focuses on just that, by telling those stories.
 
-
 Master of Science in Applied Statistics & Data Science from UCLA with 10+ years of professional experience.
 
 
