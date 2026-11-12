@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import WhyIBuilt from "../components/WhyIBuilt.astro";
+import { getCollection } from "astro:content";
+import { SOCIAL } from "../config";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hi there 👋</div>
+    <h1 class="text-5xl font-bold">I'm Francisco Avalos Jr.</h1>
+    <div class="text-3xl py-3 font-bold">Data Scientist</div>
+    <div class="py-2 text-lg space-y-3">
+      <p>
+        Well travelled around the world, lover of understanding human behavior, and an avid reader... I find the
+        connect between human cognition and data-driven results emphatically riveting.
+      </p>
+      <p>My career focuses on just that, by telling those stories.</p>
+      <p>Master of Science in Applied Statistics &amp; Data Science from UCLA with 10+ years of professional experience.</p>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a class="btn" href={SOCIAL.linkedin} target="_blank" rel="noopener">Let's connect!</a>
+      <a class="btn btn-outline" href="/projects/">View my projects</a>
+    </div>
+  </div>
+
+  <h2 class="text-3xl w-full font-bold mb-4">Featured projects {"</>"}</h2>
+  <WhyIBuilt />
+  <div class="flex flex-col gap-6">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</BaseLayout>

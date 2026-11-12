@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectLinks from "../../components/ProjectLinks.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { title, description, heroImage, heroAlt, stack, problem, result, demoUrl, codeUrl } = project.data;
+const { Content } = await project.render();
+---
+
+<BaseLayout title={`${title} | Francisco Avalos Jr.`} description={description} image={heroImage} sideBarActiveItemID="projects" ogType="article">
+  <a href="/projects/" class="link link-hover text-sm">← All projects</a>
+  <h1 class="text-4xl font-bold mt-3 mb-2">{title}</h1>
+  <p class="text-lg mb-4">{description}</p>
+  <img src={heroImage} alt={heroAlt} class="w-full rounded-lg border border-base-300 mb-4" />
+  <div class="flex flex-wrap gap-1 mb-4">
+    {stack.map((s) => <span class="badge badge-outline">{s}</span>)}
+  </div>
+  <ProjectLinks demoUrl={demoUrl} codeUrl={codeUrl} />
+
+  <article class="prose max-w-none mt-8">
+    <h2>The problem</h2>
+    <p>{problem}</p>
+    <Content />
+    <h2>Key result</h2>
+    <p set:html={result} />
+  </article>
+</BaseLayout>

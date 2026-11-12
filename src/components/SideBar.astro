@@ -1,0 +1,25 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import SideBarMenu from "./SideBarMenu.astro";
+import { SITE_AUTHOR } from "../config";
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-3 text-center">
+      <a href="/">
+        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+          <div class="w-[8.5rem] mask mask-circle">
+            <img src="/profile.jpg" width="300" height="300" alt={`Photo of ${SITE_AUTHOR}`} />
+          </div>
+        </div>
+      </a>
+      <div class="mt-4 font-bold text-lg">{SITE_AUTHOR}</div>
+      <div class="text-sm opacity-75">Data Scientist · Los Angeles, CA</div>
+    </div>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <SideBarFooter />
+  </aside>
+</div>

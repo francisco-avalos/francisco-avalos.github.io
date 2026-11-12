@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectLinks from "./ProjectLinks.astro";
+
+interface Props { project: CollectionEntry<"projects"> }
+const { project } = Astro.props;
+const { title, description, heroImage, heroAlt, stack, result, demoUrl, codeUrl } = project.data;
+const url = `/projects/${project.slug}/`;
+---
+
+<article class="rounded-lg bg-base-100 border border-base-300 overflow-hidden transition ease-in-out hover:shadow-xl">
+  <div class="flex flex-col md:flex-row">
+    <a href={url} class="md:w-[42%] shrink-0 bg-base-200">
+      <img src={heroImage} alt={heroAlt} loading="lazy" class="w-full h-56 md:h-full object-cover object-left-top" />
+    </a>
+    <div class="p-5 grow">
+      <h2 class="text-xl font-bold"><a href={url} class="hover:underline">{title}</a></h2>
+      <p class="py-2">{description}</p>
+      <div class="flex flex-wrap gap-1 mb-3">
+        {stack.map((s) => <span class="badge badge-outline">{s}</span>)}
+      </div>
+      <div class="bg-base-200 border-l-4 border-neutral rounded px-3 py-2 mb-4 text-sm">
+        <span class="font-bold">Key result:</span> <Fragment set:html={result} />
+      </div>
+      <ProjectLinks demoUrl={demoUrl} codeUrl={codeUrl} />
+      <a href={url} class="link link-hover font-bold text-sm mt-3 inline-block">Read the case study →</a>
+    </div>
+  </div>
+</article>

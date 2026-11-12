@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import WhyIBuilt from "../components/WhyIBuilt.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Projects | Francisco Avalos Jr." sideBarActiveItemID="projects">
+  <h1 class="text-3xl w-full font-bold mb-2">Projects</h1>
+  <p class="text-lg mb-6">End-to-end data products I've built: from data ingestion through modeling to live, deployed dashboards.</p>
+  <WhyIBuilt />
+  <div class="flex flex-col gap-6">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</BaseLayout>

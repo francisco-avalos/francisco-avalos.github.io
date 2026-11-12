@@ -1,6 +1,0 @@
-{% include base_path %}
-<div class="project-header">
-  <img class="project-header__image" src="{{ base_path }}{{ include.project.image }}" alt="{{ include.project.image_alt }}">
-  {% if include.project.stack %}<ul class="project-tags">{% for tag in include.project.stack %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
-  {% include project-links.html project=include.project %}
-</div>
