@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Project cards, case-study headers and link buttons
+   ========================================================================== */
+
+$project-accent: #c1663a;
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.project-intro {
+  padding: 0.8em 1em;
+  border-left: 3px solid $project-accent;
+  background: mix(#fff, $project-accent, 94%);
+  font-style: italic;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  &__image {
+    display: block;
+    border-bottom: 1px solid $border-color;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top left;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1em 1.25em 1.25em;
+  }
+
+  &__title {
+    margin: 0 0 0.5em;
+    font-size: $type-size-4;
+
+    a { color: $text-color; text-decoration: none; }
+    a:hover { color: $project-accent; }
+  }
+
+  &__problem,
+  &__result {
+    margin: 0 0 0.75em;
+    font-size: 0.85em;
+    line-height: 1.5;
+  }
+
+  &__result {
+    padding: 0.6em 0.8em;
+    border-left: 3px solid $project-accent;
+    background: mix(#fff, $project-accent, 92%);
+  }
+
+  .project-links { margin-top: auto; }
+
+  &__more {
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.5em 0 0.4em;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.45em 1em;
+  border: 1px solid $text-color;
+  border-radius: 4px;
+  color: $text-color !important;
+  font-family: $sans-serif;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-decoration: none !important;
+
+  &:hover { background: $text-color; color: #fff !important; }
+
+  &--primary {
+    border-color: $project-accent;
+    background: $project-accent;
+    color: #fff !important;
+
+    &:hover {
+      border-color: mix(#000, $project-accent, 20%);
+      background: mix(#000, $project-accent, 20%);
+    }
+  }
+}
+
+.project-note {
+  margin: 0 0 1em;
+  color: $gray;
+  font-size: 0.75em;
+}
+
+.project-header {
+  margin-bottom: 1.5em;
+
+  &__image {
+    display: block;
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    margin-bottom: 0.75em;
+  }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0 0 0.5em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    background: $lighter-gray;
+    font-size: $type-size-7;
+  }
+}

@@ -1,5 +1,4 @@
 # main links
-# Add pages here as they are created, e.g.:
-#  - title: "Projects"
-#    url: /projects/
-main: []
+main:
+  - title: "Projects"
+    url: /projects/

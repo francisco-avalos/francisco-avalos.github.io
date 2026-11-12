@@ -176,7 +176,7 @@ kramdown:
 collections:
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
 
 
 # Defaults
@@ -206,8 +206,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
+      share: false
 
 # Sass/SCSS
 sass:

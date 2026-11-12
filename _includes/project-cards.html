@@ -1,0 +1,16 @@
+{% include base_path %}
+{% assign projects = site.portfolio | sort: "order" %}
+<div class="project-grid">
+{% for project in projects %}
+  <article class="project-card">
+    <a class="project-card__image" href="{{ base_path }}{{ project.url }}"><img src="{{ base_path }}{{ project.image }}" alt="{{ project.image_alt }}" loading="lazy"></a>
+    <div class="project-card__body">
+      <h3 class="project-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
+      <p class="project-card__problem">{{ project.excerpt }}</p>
+      <div class="project-card__result"><strong>Key result:</strong> {{ project.result | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+      {% include project-links.html project=project %}
+      <a class="project-card__more" href="{{ base_path }}{{ project.url }}">Read the case study &rarr;</a>
+    </div>
+  </article>
+{% endfor %}
+</div>

@@ -1,0 +1,5 @@
+<div class="project-links">
+  {% if include.project.demo_url %}<a class="project-btn project-btn--primary" href="{{ include.project.demo_url }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live demo</a>{% endif %}
+  {% if include.project.code_url %}<a class="project-btn" href="{{ include.project.code_url }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+</div>
+{% if include.project.demo_url %}<p class="project-note"><i class="fas fa-hourglass-half" aria-hidden="true"></i> The live demo is hosted on Heroku and can take a few seconds to load.</p>{% endif %}
